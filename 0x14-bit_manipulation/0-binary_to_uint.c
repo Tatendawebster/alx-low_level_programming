@@ -9,19 +9,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-        unsigned char result = 0;
-        unsigned int i = 0;
+	unsigned char result = 0;
+	unsigned int i = 0;
 
 switch (b[i])
-        {
-                case '0':
-                result += 1;
-                break;
-                case '1':
-                result += 2;
-                break;
-                default:
-                result = -1;
+{
+	case '0':
+	result += 1;
+	break;
+	case '1':
+	result += 2;
+	break;
+	default:
+	result = -1;
 break;
 }
 
