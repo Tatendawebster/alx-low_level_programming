@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
-* print_binary: Prints the binary representation of the number n
+* print_binary -  Prints the binary representation of the number n.
 *
-* n: The number to be printed in binary format.
+* @n: The number to be printed in binary format.
 *
 * Output: A string representing the binary equivalent of n.
 *
@@ -17,12 +17,12 @@
 * Returns: Nothing
 */
 
-void print_binary(unsigned long int n) 
+void print_binary(unsigned long int n)
 {
 	if (n == 0)
 {
 	write(1, "0", 1);
-	return;
+	return ();
 }
 
 unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
