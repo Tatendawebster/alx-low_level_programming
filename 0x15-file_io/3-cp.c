@@ -1,14 +1,16 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+char *create_buffer(char *file);
+void close_file(int fd);
 
 /**
- * error_file - checks if files can be opened.
- * @file_from: file_from.
- * @file_to: file_to.
- * @argv: arguments vector.
- * Return: no return.
+ * creates_buffer - Allocates 1024 bytes to a buffer.
+ * @file: name of file buffer is storing chars for.
+ *
+ * Return: pointer to the newly-allocated buffer.
  */
-void error_file(int file_from, int file_to, char *argv[])
 char *creates_buffer(char *file)
 {
 	char *buffer;
@@ -44,10 +46,10 @@ void close_file(int fd)
 
 /**
  * main - Copies the contents of a file to another file.
- * @argc:  number of arguments supplied to the program.
- * @argv:  array of pointers to the arguments.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: array of pointers to the arguments.
  *
- * Return: 0 always.
+ * Return: 0 on success.
  *
  * Description: If the argument count is incorrect - exit code 97.
  * If file_from does not exist or cannot be read - exit code 98.
